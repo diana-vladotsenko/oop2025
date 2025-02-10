@@ -4,7 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 //teeme andmebaasi tabelid automaatselt, mis on klassi nimega ehk Hibernate
@@ -27,6 +29,10 @@ import lombok.Setter;
 @Entity
 @Setter //encapsulation (paneme kõik privatsesse)
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+
+
 public class Product {
     @Id
     //hakkame genereerima id-d
