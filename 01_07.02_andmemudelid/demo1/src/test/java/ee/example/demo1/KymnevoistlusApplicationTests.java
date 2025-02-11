@@ -1,13 +1,13 @@
-package ee.dianaV.online.store;
+package ee.example.demo1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OnlineStoreApplicationTests {
+class KymnevoistlusApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
