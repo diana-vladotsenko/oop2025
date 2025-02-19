@@ -4,10 +4,7 @@ package ee.dianaV.online.controller;
 import ee.dianaV.online.entity.Product;
 import ee.dianaV.online.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,9 +31,11 @@ public class ProductController {
         return productRepository.findAll();
     }
 
-
-
-
-
+    //DELETE LOCALHOST:8080/products/1 or 2 or 6 7
+    @DeleteMapping("products/{id}")
+    public List <Product> deleteProducts(@PathVariable Long id) {
+        productRepository.deleteById(id);
+        return productRepository.findAll();
+    }
 }
 
